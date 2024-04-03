@@ -14,7 +14,7 @@ function App() {
         <div className="row">
           <div className="col-4 col-lg-3 col-xl-2 pe-0 position-relative" id='sidebar_container-col'>
             <Sidebar />
-            <AiOutlineArrowRight style={{
+            <AiOutlineArrowRight className='arrow' style={{
               position: "absolute",
               right: "-15px",
               top: "50%",
@@ -28,7 +28,7 @@ function App() {
             onClick={() => document.getElementById("sidebar_container-col").classList.toggle("opened")}  />
 
           </div>
-          <div className="col-8 col-lg-9 col-xl-10" id='main-container-col' style={{padding: "0px 30px", overflow: "auto", height: "100vh"}}>
+          <div className="col-8 col-lg-9 col-xl-10" id='main-container-col' style={{padding: "0px 30px", overflow: "hidden auto", height: "100vh"}}>
             <Header />
             <Analytics />
             <div className='row mt-4 mb-4'>

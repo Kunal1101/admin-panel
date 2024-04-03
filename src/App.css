@@ -122,7 +122,7 @@ button:focus:not(:focus-visible) {
   border-radius: 50%;
 }
 .analytics-icon svg {
-  width: 70px;
+  width: 60px;
   height: 60px;
 }
 .analytics-title {
@@ -135,12 +135,10 @@ button:focus:not(:focus-visible) {
 .analytics-month {
   font-size: 14px;
 }
-.barchart-box {
-  height: 100%;
-}
 .barchart-box,
 .pieChart-box,
 .productList-box {
+  height: 100%;
   padding: 20px;
   background-color: #fff;
   border-radius: 14px;
@@ -172,8 +170,15 @@ thead tr {
 tbody tr td {
   border: none;
 }
-
-
+.recharts-pie-sector {
+  transition: all .5s;
+}
+.recharts-pie-sector:hover {
+  transform: scale(1.01);
+}
+.pieChart-main {
+  border-radius: 50%;
+}
 /* media query */
 @media screen and (max-width: 991px) {
   #sidebar_container-col.opened {
@@ -185,12 +190,12 @@ tbody tr td {
     left: -21%;
   }
 }
-@media screen and (max-width: 1200px) and (min-width: 1300px) {
+@media screen and (max-width: 1200px) and (min-width: 1299px) {
   #sidebar_container-col.opened {
     left: -13%;
   }
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1299px) {
   #sidebar_container-col.opened {
     position: absolute;    
     z-index: 1;    
@@ -205,5 +210,10 @@ tbody tr td {
     width: 100%;
     left: 25px;
     position: absolute;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .arrow {
+    display: none;
   }
 }
