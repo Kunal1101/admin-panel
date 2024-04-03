@@ -1,38 +1,209 @@
-.App {
-  text-align: center;
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+body {
+  overflow: hidden;
+  font-family: 'Poppins';
+  background-color: #f5f6f8;
+  font-size: 16px;
+}
+button:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+.sidebar_container {
+  background-color: #040440;
+  color: #fff;
+  height: 100%;
+  padding: 0px 16px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.menu-item {
+  font-size: 14px;
+}
+.menu-item-box {
+  transition: all .5s;
+  cursor: pointer;
+  padding: 8px 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+.menu-item-box:hover {
+  background-color: #2d2d69;
+}
+.user-details-box {
+  background-color: #2d2d69;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.user-details-box img {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+.user-details-box .user_name {
+  font-size: 14px;
+}
+.user-details-box .user_designation {
+  font-size: 12px;
+}
+.search-field {
+  padding: 5px 0px 5px 25px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+.search-icon {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  width: 14px;
+}
+.analytics-box {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 10px;
+  border-radius: 14px;
+}
+.analytics-icon {
+  padding: 20px;
+  border-radius: 50%;
+}
+.analytics-icon svg {
+  width: 70px;
+  height: 60px;
+}
+.analytics-title {
+  color: #a9a8a8;
+  font-size: 12px;
+}
+.analytics-amount {
+  font-size: 20px;
+}
+.analytics-month {
+  font-size: 14px;
+}
+.barchart-box {
+  height: 100%;
+}
+.barchart-box,
+.pieChart-box,
+.productList-box {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 14px;
+}
+.xAxis line {
+  display: none;
+}
+.recharts-responsive-container {
+  height: 350px !important;
+}
+.recharts-layer tspan {
+  font-family: 'Poppins';
+  font-weight: 500;
+  color: #757575;
+}
+.chart-heading,
+.pieChart-heading,
+.product-heading h2 {
+  font-size: 20px;
+}
+.chart-sub-heading,
+.pieChart-subheading {
+  color: #a9a8a8;
+  font-size: 12px;
+}
+thead tr {
+  color: #a9a8a8;
+}
+tbody tr td {
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* media query */
+@media screen and (max-width: 991px) {
+  #sidebar_container-col.opened {
+    left: -28%;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width: 992px) and (min-width: 1199px) {
+  #sidebar_container-col.opened {
+    left: -21%;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 1300px) {
+  #sidebar_container-col.opened {
+    left: -13%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #sidebar_container-col.opened {
+    position: absolute;    
+    z-index: 1;    
+    transition: all .5s;
+    height: 100vh;
+  }
+  #sidebar_container-col {
+    left: 0%;
+    transition: all .5s; 
+  }
+  .opened + #main-container-col {
+    width: 100%;
+    left: 25px;
+    position: absolute;
   }
 }
