@@ -27,8 +27,7 @@ function ProductItem() {
   ]
   return (
     <>
-      <div>
-        <table className="table table-responsive">
+        <table className="table">
           <thead>
             <tr>
               {/* <th scope="col" className='poppins-medium'></th> */}
@@ -60,7 +59,6 @@ function ProductItem() {
               }
           </tbody>
         </table>
-      </div>
     </>
   )
 }

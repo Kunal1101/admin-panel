@@ -9,7 +9,7 @@ function ProductList() {
       <div className='productList-box'>
       <div className='product-heading mb-3 d-flex flex-wrap justify-content-between'>
           <h2 className='poppins-semobold'>Overview</h2>
-        <div className='d-flex gap-4'>
+        <div className='d-flex gap-4 flex-wrap flex-sm-nowrap'>
           <form className="d-flex position-relative" role="search">
             <input className="search-field" type="search" placeholder="Search" aria-label="Search" style={{backgroundColor: "#f2efff"}} />
             <SlMagnifier className='search-icon' />
